@@ -1,6 +1,15 @@
 {
-  "version": "1.10.1",
+  "version": "1.11.0",
   "changelog": [
+    {
+      "version": "1.11.0",
+      "date": "2026-08-14",
+      "changes": [
+        "Brought up to date for current Python and libraries: verified and tested on Python 3.13 with PySide6 6.11, mutagen 1.48, Pillow 12 and requests 2.34. The minimum Python version is now 3.10, because the current releases of these libraries no longer support anything older; run.bat and the documentation say so too.",
+        "New command-line parameters on app.py: --help/-h (description, version, parameter list, examples), --version (version number and date), --Ende/-E (wait for a key press when the program ends) and --no-log (turn off writing error.log). Wrong parameters produce an error message pointing at --help.",
+        "Fixed a stale development test that still expected the pre-1.5.0 behavior (missing files carried no gray marker)."
+      ]
+    },
     {
       "version": "1.10.1",
       "date": "2026-07-15",

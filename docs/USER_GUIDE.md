@@ -6,7 +6,7 @@ collaboration with Jakub Konopásek.
 
 ## 1. Installation and first run
 
-1. Install [Python 3.9 or newer](https://www.python.org/downloads/). During
+1. Install [Python 3.10 or newer](https://www.python.org/downloads/). During
    installation, check **"Add python.exe to PATH"**.
 2. Download this repository (green **Code** button → *Download ZIP*, then
    unpack) or clone it with git.

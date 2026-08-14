@@ -9,7 +9,7 @@ via History.
 Written by **Claude Fable 5** (Anthropic's AI model) in collaboration with
 Jakub Konopásek.
 
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 
@@ -64,7 +64,7 @@ Jakub Konopásek.
 
 ## Quick start
 
-1. Install [Python 3.9+](https://www.python.org/downloads/) (check *"Add
+1. Install [Python 3.10+](https://www.python.org/downloads/) (check *"Add
    python.exe to PATH"* during installation).
 2. Download or clone this repository.
 3. Double-click **`run.bat`**. On first run it creates a virtual environment
@@ -72,6 +72,11 @@ Jakub Konopásek.
    instantly.
 4. In the app, open **Libraries…**, point it at your music root, and list
    your artist folders. Then **Scan library…** and review what it found.
+
+Command-line parameters (optional, also via `run.bat`): `--help`/`-h` shows
+the parameter list with examples, `--version` prints version and date,
+`--Ende`/`-E` waits for a key press when the program ends, and `--no-log`
+turns off the `error.log` file.
 
 See the [User Guide](docs/USER_GUIDE.md) for a full walkthrough and the
 [Development Guide](docs/DEVELOPMENT.md) for the architecture and how to
@@ -88,7 +93,7 @@ contribute.
 
 ## Requirements
 
-- Windows, Python 3.9+
+- Windows, Python 3.10+ (tested up to 3.13)
 - Dependencies (installed automatically by `run.bat`):
   [mutagen](https://mutagen.readthedocs.io/) (tag I/O),
   [PySide6](https://doc.qt.io/qtforpython/) (GUI),

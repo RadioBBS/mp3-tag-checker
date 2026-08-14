@@ -6,7 +6,7 @@ with Jakub Konopásek.
 
 ## Tech stack
 
-- **Python 3.9+**, GUI in **PySide6** (Qt 6, Fusion style)
+- **Python 3.10+** (tested up to 3.13), GUI in **PySide6** (Qt 6, Fusion style)
 - **mutagen** for ID3 reading/writing, **Pillow** for cover images,
   **requests** for online metadata
 - **SQLite** (stdlib `sqlite3`) for all persistent state — one database per

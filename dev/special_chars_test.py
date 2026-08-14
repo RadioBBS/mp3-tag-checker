@@ -166,8 +166,11 @@ def tree_album_keys():
 check("ghost album hidden from change-type tree",
       ghost_adir not in tree_album_keys(), str(tree_album_keys()))
 alb_sev, art_sev, trk_sev = w._severities()
+# Since v1.5.0 a missing file is deliberately marked gray - but the ghost's
+# red issue must never leak into the tree colors.
 check("ghost issue does not color live entries",
-      ghost_adir not in alb_sev and ghost_tid not in trk_sev)
+      alb_sev.get(ghost_adir) in (None, "gray")
+      and trk_sev.get(ghost_tid) in (None, "gray"))
 
 # album view of the ghost path: explanatory note instead of an empty editor
 w.detail.show_album(ghost_adir)

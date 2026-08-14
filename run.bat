@@ -17,10 +17,10 @@ if not defined PYCMD (
     exit /b 1
 )
 
-rem ---- require Python 3.9+ (needed by PySide6) ----
-%PYCMD% -c "import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)" >nul 2>&1
+rem ---- require Python 3.10+ (needed by current PySide6 / Pillow) ----
+%PYCMD% -c "import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)" >nul 2>&1
 if errorlevel 1 (
-    echo Your Python is too old for this application - version 3.9 or newer is
+    echo Your Python is too old for this application - version 3.10 or newer is
     echo required. Please install the current version from
     echo https://www.python.org/downloads/ and run this again.
     %PYCMD% --version
