@@ -1,5 +1,31 @@
-"""Online metadata: MusicBrainz release search, Cover Art Archive covers,
-Deezer artist images. All on-demand, never automatic."""
+"""
+MP3 Tag Checker – Online-Metadaten: MusicBrainz, Cover Art Archive, Deezer.
+
+Projekt:     MP3 Tag Checker
+Modul:       mp3lib/online.py
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+
+Beschreibung
+------------
+Online metadata: MusicBrainz release search, Cover Art Archive covers,
+Deezer artist images. All on-demand, never automatic.
+
+Historie
+--------
+Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende, Python 3.13
+Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+
+Aufruf / Nutzung
+----------------
+  Siehe app.py --help
+"""
 
 import time
 
@@ -11,7 +37,13 @@ _last_mb = [0.0]
 
 
 def _mb_get(path, params):
-    # MusicBrainz allows 1 request/second
+    """
+    Beschreibung: GET gegen die MusicBrainz-API mit 1-Request/Sekunde.
+    Parameter: path – API-Pfad; params – Query-Dict
+    Rueckgabewert: JSON als dict
+    Fehlerfaelle: requests.HTTPError bei Status != 2xx
+    Beispiel: _mb_get("/release", {"query": 'artist:"x"', "limit": 6})
+    """
     wait = 1.1 - (time.time() - _last_mb[0])
     if wait > 0:
         time.sleep(wait)

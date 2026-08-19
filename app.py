@@ -1,38 +1,36 @@
 #!/usr/bin/env python3
-# ---------------------------------------------------------------------------
-# MP3 Tag Checker - Einstiegspunkt der GUI-Anwendung
-#
-# Programmbeschreibung:
-#   Prueft und repariert die ID3-Tags einer MP3-Bibliothek (lokal oder auf
-#   einem NAS). Die Anwendung scannt, schlaegt Aenderungen vor und schreibt
-#   nur, was der Benutzer bestaetigt; jeder Schreibvorgang wird vorher
-#   gesichert und ist rueckgaengig zu machen.
-#
-# Zweck:
-#   Start der grafischen Oberflaeche inkl. Kommandozeilen-Parametern,
-#   zentraler Fehlerbehandlung und Fehler-Logging.
-#
-# Autor:   Claude (Anthropic) in Zusammenarbeit mit Jakub Konopasek
-# Version: siehe version.json (Aenderungsverlauf ebenfalls dort)
-# Lizenz:  MIT, Open Source (siehe LICENSE)
-#
-# Parameter:
-#   -h, --help    Typ: Schalter, Standard: aus
-#                 Zeigt Programmbeschreibung, Version, Parameterliste und
-#                 Beispiele an. Beispiel: python app.py --help
-#   --version     Typ: Schalter, Standard: aus
-#                 Zeigt Versionsnummer und Datum an.
-#                 Beispiel: python app.py --version
-#   -E, --Ende    Typ: Schalter, Standard: aus
-#                 Aktiviert am Programmende die Abfrage
-#                 "Programmende: Hit any Key or Enter".
-#                 Beispiel: python app.py --Ende
-#   --no-log      Typ: Schalter, Standard: aus (Logging ist eingeschaltet)
-#                 Schaltet das Schreiben von error.log ab.
-#                 Beispiel: python app.py --no-log
-#   Falsche Parameter fuehren zu einer Fehlermeldung mit Hinweis auf --help.
-# ---------------------------------------------------------------------------
-"""MP3 Tag Checker - GUI application entry point."""
+"""
+MP3 Tag Checker – GUI zum Pruefen und Reparieren von ID3-Tags.
+
+Projekt:     MP3 Tag Checker
+Modul:       app.py
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+
+Beschreibung
+------------
+Start der grafischen Oberflaeche inkl. Kommandozeilen-Parametern,
+zentraler Fehlerbehandlung und Fehler-Logging. Schreibt nur nach
+Bestaetigung; jeder Schreibvorgang wird gesichert.
+
+Historie
+--------
+Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende/--no-log, Python 3.13
+Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+
+Aufruf / Nutzung
+----------------
+  python app.py --help
+  python app.py --version
+  python app.py --Ende
+  python app.py --no-log
+"""
 
 import argparse
 import json
@@ -63,11 +61,12 @@ _logging_enabled = True
 def read_version_info():
     """Liest Versionsnummer und Datum aus version.json.
 
+    Beschreibung: Liest Versionsnummer und Datum aus version.json.
     Parameter: keine.
     Rueckgabewert: Tupel (version, datum) als Strings.
     Fehlerfaelle: fehlende/defekte Datei liefert ("0.0.0", "") - es wird
     nie eine Ausnahme ausgeloest.
-    Beispiel: read_version_info() -> ("1.11.0", "2026-08-14")
+    Beispiel: read_version_info() -> ("1.12.0", "2026-08-18")
     """
     try:
         data = json.loads((BASE_DIR / "version.json")
@@ -145,7 +144,7 @@ def _install_excepthook():
 def _wait_for_key():
     """Wartet am Programmende auf eine Eingabe (Parameter --Ende / -E)."""
     try:
-        input("Programmende: Hit any Key or Enter")
+        input('Programmende: "Hit any Key or Enter"')
     except (EOFError, KeyboardInterrupt):
         pass
 

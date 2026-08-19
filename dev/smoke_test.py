@@ -1,7 +1,33 @@
 # -*- coding: utf-8 -*-
-"""Smoke test for the new rule modes, mojibake behavior, v1-conflict flow
+"""
+MP3 Tag Checker – Smoke-Test Regeln, Mojibake, ID3v1, Year-Roundtrip.
+
+Projekt:     MP3 Tag Checker
+Modul:       dev/smoke_test.py
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+
+Beschreibung
+------------
+Smoke test for the new rule modes, mojibake behavior, v1-conflict flow
 and the 'undated' year round-trip. Runs against an in-memory DB and a tiny
-generated MP3 file. No GUI."""
+generated MP3 file. No GUI.
+
+Historie
+--------
+Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende, Python 3.13
+Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+
+Aufruf / Nutzung
+----------------
+  Siehe app.py --help
+"""
 import io
 import json
 import os

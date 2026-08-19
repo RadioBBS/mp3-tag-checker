@@ -1,19 +1,30 @@
-# MP3 Tag Checker - Python dependencies
+# MP3 Tag Checker – Python-Abhaengigkeiten.
 #
-# Normally you do NOT need to run anything by hand: run.bat checks Python,
-# creates the virtual environment and installs everything below automatically.
+# Projekt:     MP3 Tag Checker
+# Modul:       requirements.txt
+# Version:     1.12.0
+# Stand:       2026-08-18
+# Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+# Bezug:       requirements.txt
+# Lizenz:      MIT
+# Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       Frank Heider / RadioBBS
 #
-# Manual installation (run in this folder, e.g. in cmd):
-#   py -3 -m venv .venv
-#   .venv\Scripts\python.exe -m pip install --upgrade pip
-#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+# Historie
+# --------
+# Version 1.11.0 – 2026-08-14 – Python 3.13, PySide6 6.11
+# Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf
 #
-# ...and start the app with:
-#   .venv\Scripts\python.exe app.py
+#   python -m pip install -r requirements.txt
 #
-# (Lines starting with # are comments - pip ignores them.)
+#   python -m venv .venv
+#   .venv\Scripts\activate
+#   python -m pip install -r requirements.txt
+#
+# run.bat legt die venv an und installiert automatisch.
 
-# Minimum versions: the first releases with official Python 3.13 support
+# Minimum versions: first releases with official Python 3.13 support
 # (verified with Python 3.13 / PySide6 6.11 / Pillow 12 / mutagen 1.48).
 mutagen>=1.47
 Pillow>=11.0

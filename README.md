@@ -1,5 +1,20 @@
 # MP3 Tag Checker
 
+```
+MP3 Tag Checker – GUI zum Pruefen und Reparieren von ID3-Tags.
+
+Projekt:     MP3 Tag Checker
+Modul:       README.md
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+```
+
 A Windows desktop application that audits and fixes the ID3 tags of an MP3
 library — local or on a NAS over Samba (a mapped network drive). Nothing is
 ever written without your review: the app scans, proposes changes, and writes

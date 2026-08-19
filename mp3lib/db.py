@@ -1,4 +1,30 @@
-"""SQLite storage: tracks, tag snapshots (history), issues, proposals, changelog."""
+"""
+MP3 Tag Checker – SQLite-Speicher fuer Tracks, Snapshots und Vorschlaege.
+
+Projekt:     MP3 Tag Checker
+Modul:       mp3lib/db.py
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+
+Beschreibung
+------------
+SQLite storage: tracks, tag snapshots (history), issues, proposals, changelog.
+
+Historie
+--------
+Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende, Python 3.13
+Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+
+Aufruf / Nutzung
+----------------
+  Siehe app.py --help
+"""
 
 import json
 import sqlite3

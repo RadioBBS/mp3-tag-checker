@@ -1,6 +1,32 @@
 # -*- coding: utf-8 -*-
-"""Offscreen test of the theme system: palettes, status colors, user themes,
-Appearance tab (save-as-new, delete, built-in protection)."""
+"""
+MP3 Tag Checker – Offscreen-Test des Theme-Systems.
+
+Projekt:     MP3 Tag Checker
+Modul:       dev/theme_test.py
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+
+Beschreibung
+------------
+Offscreen test of the theme system: palettes, status colors, user themes,
+Appearance tab (save-as-new, delete, built-in protection).
+
+Historie
+--------
+Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende, Python 3.13
+Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+
+Aufruf / Nutzung
+----------------
+  Siehe app.py --help
+"""
 import json
 import os
 import sys

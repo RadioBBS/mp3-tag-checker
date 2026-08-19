@@ -1,5 +1,21 @@
 # -*- coding: utf-8 -*-
-"""Dynamic ('extra') tags + search workflow regression test (offscreen GUI).
+"""
+MP3 Tag Checker – Dynamische Extra-Tags und Suche (Offscreen-GUI).
+
+Projekt:     MP3 Tag Checker
+Modul:       dev/extra_tags_test.py
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+
+Beschreibung
+------------
+Dynamic ('extra') tags + search workflow regression test (offscreen GUI).
 
 Modelled on the real 'temp/3 lydi' albums, whose files carry named comment
 frames (COMM:MusicMatch_Situation, COMM:Songs-DB_Occasion) and lyrics next to
@@ -15,6 +31,15 @@ searchable, not editable. This test pins down that
   - double-clicking a result reveals AND SELECTS the track (or the album) in the
     library tree on the left, with the right panel following,
   - coming back to Search keeps the conditions, the results and the last row.
+
+Historie
+--------
+Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende, Python 3.13
+Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+
+Aufruf / Nutzung
+----------------
+  Siehe app.py --help
 """
 import os
 import sys

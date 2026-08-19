@@ -1,7 +1,32 @@
-﻿"""Applying approved proposals to files, and reverting to older versions.
+"""
+MP3 Tag Checker – Bestaetigte Aenderungen schreiben und History-Revert.
+
+Projekt:     MP3 Tag Checker
+Modul:       mp3lib/applier.py
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+
+Beschreibung
+------------
+Applying approved proposals to files, and reverting to older versions.
 
 Every write: snapshot afterwards (so the latest snapshot always equals the
 file's current state), changelog entry per changed field, rules re-evaluated.
+
+Historie
+--------
+Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende, Python 3.13
+Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+
+Aufruf / Nutzung
+----------------
+  Siehe app.py --help
 """
 
 import json

@@ -1,5 +1,21 @@
 # -*- coding: utf-8 -*-
-"""Special-character album regression test (offscreen GUI).
+"""
+MP3 Tag Checker – Regressionstest fuer Sonderzeichen in Alben (Offscreen-GUI).
+
+Projekt:     MP3 Tag Checker
+Modul:       dev/special_chars_test.py
+Version:     1.12.0
+Stand:       2026-08-18
+Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Bezug:       requirements.txt
+Lizenz:      MIT
+Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+Erstellt mit: Cursor Grok 4.6
+Autor:       Frank Heider / RadioBBS
+
+Beschreibung
+------------
+Special-character album regression test (offscreen GUI).
 
 Replica of a real NAS album whose titles are made of slashes/symbols and
 whose custom TXXX tags carry a huge AcoustID fingerprint:
@@ -10,6 +26,15 @@ whose custom TXXX tags carry a huge AcoustID fingerprint:
     scan log with full paths, and be removable via the cleanup button,
   - the change-type tree order must be stable (severity + fixed priority,
     never counts).
+
+Historie
+--------
+Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende, Python 3.13
+Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+
+Aufruf / Nutzung
+----------------
+  Siehe app.py --help
 """
 import os
 import sys

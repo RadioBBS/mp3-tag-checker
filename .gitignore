@@ -1,3 +1,21 @@
+# MP3 Tag Checker – Git-Ignore-Liste.
+#
+# Projekt:     MP3 Tag Checker
+# Modul:       .gitignore
+# Version:     1.12.0
+# Stand:       2026-08-18
+# Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+# Bezug:       requirements.txt
+# Lizenz:      MIT
+# Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       Frank Heider / RadioBBS
+#
+# Historie
+# --------
+# Version 1.11.0 – 2026-08-14 – venv, Nutzerdaten, temp
+# Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: __local__/__scratch__/__testdata__/
+
 # Python environment and caches
 .venv/
 __pycache__/
@@ -14,6 +32,9 @@ library*.db
 
 # Local test music / scratch library folders (never publish - may be copyrighted)
 temp/
+__local__/
+__scratch__/
+__testdata__/
 
 dev/config.backup.json
 
