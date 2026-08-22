@@ -12,7 +12,7 @@ Bezug:       requirements.txt
 Lizenz:      MIT
 Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
 Erstellt mit: Cursor Grok 4.6
-Autor:       Frank Heider / RadioBBS
+Autor:       (FFHB) / RadioBBS
 ```
 
 A Windows desktop application that audits and fixes the ID3 tags of an MP3

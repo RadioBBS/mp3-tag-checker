@@ -1,0 +1,42 @@
+# Werte muessen mit den Dateikoepfen uebereinstimmen (eine Quelle der Wahrheit).
+# Styleguide 1.5.2 / Software-Standard 1.1.0 – Agent zuerst diese Datei lesen.
+#
+# Projekt:     MP3 Tag Checker
+# Modul:       PROJECT.yaml
+# Version:     1.12.0
+# Stand:       2026-08-18
+# Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+# Bezug:       requirements.txt
+# Lizenz:      MIT
+# Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+
+name: MP3 Tag Checker
+description: GUI zum Pruefen und Reparieren von ID3-Tags.
+language: python
+python_min: "3.10"
+license: MIT
+version: "1.12.0"
+stand: "2026-08-18"
+author: (FFHB) / RadioBBS
+scripts:
+  - app.py
+standards:
+  styleguide: "1.5.2"
+  styleguide_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\0-Style‑Guide.txt"
+  software_standard: "1.1.0"
+  software_standard_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\MY-SOFTWARE-STANDARD v1.0.0.txt"
+testing:
+  framework: script
+  command: python dev/smoke_test.py
+  required: false
+  live_network: false
+maintenance:
+  status: active
+  owner: RadioBBS
+documentation:
+  language: de
+security:
+  secrets_in_repo: false
+  scans_dot_directories: false
