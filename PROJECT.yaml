@@ -1,5 +1,5 @@
 # Werte muessen mit den Dateikoepfen uebereinstimmen (eine Quelle der Wahrheit).
-# Styleguide 1.5.2 / Software-Standard 1.1.0 – Agent zuerst diese Datei lesen.
+# Styleguide 1.7.0 / Software-Standard 1.2.0 – Agent zuerst diese Datei lesen.
 #
 # Projekt:     MP3 Tag Checker
 # Modul:       PROJECT.yaml
@@ -20,18 +20,29 @@ license: MIT
 version: "1.12.0"
 stand: "2026-08-18"
 author: (FFHB) / RadioBBS
+upstream: https://github.com/DarkKoNO/mp3-tag-checker
 scripts:
   - app.py
+repository:
+  host: github
+  owner: RadioBBS
+  name: mp3-tag-checker
+  url: https://github.com/RadioBBS/mp3-tag-checker
+  visibility: public
+  default_branch: main
 standards:
-  styleguide: "1.5.2"
+  styleguide: "1.7.0"
   styleguide_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\0-Style‑Guide.txt"
-  software_standard: "1.1.0"
+  software_standard: "1.2.0"
   software_standard_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\MY-SOFTWARE-STANDARD v1.0.0.txt"
 testing:
   framework: script
   command: python dev/smoke_test.py
   required: false
   live_network: false
+cli:
+  help: [--help, -h]
+  version: [--version]
 maintenance:
   status: active
   owner: RadioBBS
@@ -40,3 +51,7 @@ documentation:
 security:
   secrets_in_repo: false
   scans_dot_directories: false
+machine_readable:
+  - PROJECT.yaml
+  - pyproject.toml
+  - CITATION.cff

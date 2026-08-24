@@ -1,0 +1,29 @@
+# MP3 Tag Checker – Citation File Format (maschinenlesbare Zitation).
+#
+# Projekt:     MP3 Tag Checker
+# Modul:       CITATION.cff
+# Version:     1.12.0
+# Stand:       2026-08-18
+# Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+# Bezug:       requirements.txt
+# Lizenz:      MIT
+# Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.12.0 – 2026-08-24 – Datei angelegt (Software-Standard 1.2.0).
+
+cff-version: 1.2.0
+message: "Bitte mit diesen Metadaten zitieren."
+title: MP3 Tag Checker
+abstract: GUI zum Pruefen und Reparieren von ID3-Tags.
+version: "1.12.0"
+date-released: "2026-08-18"
+license: MIT
+authors:
+  - name: "(FFHB) / RadioBBS"
+repository-code: https://github.com/RadioBBS/mp3-tag-checker
+url: https://github.com/RadioBBS/mp3-tag-checker
+type: software
