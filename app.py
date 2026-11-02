@@ -33,6 +33,8 @@ Aufruf / Nutzung
   python app.py --no-log
 """
 
+import os
+import platform
 import argparse
 import json
 import sys
@@ -150,6 +152,76 @@ def _wait_for_key():
         pass
 
 
+def _ausgabe_ist_terminal() -> bool:
+    """Meldet, ob stdout ein Terminal ist.
+
+    Rückgabewert:
+        True bei einem Terminal.
+
+    Fehlerfälle:
+        Eine fehlende isatty-Methode gilt als kein Terminal.
+
+    Beispiel:
+        _ausgabe_ist_terminal()
+    """
+    try:
+        return bool(sys.stdout.isatty())
+    except (AttributeError, ValueError):
+        return False
+
+
+def print_startup_banner() -> None:
+    """Gibt Kurzname, Zweck und Version vor dem Fachlauf aus.
+
+    Rückgabewert:
+        None
+
+    Fehlerfälle:
+        Keine.
+
+    Beispiel:
+        print_startup_banner()
+    """
+    if sys.platform == "win32":
+        os.system("")
+    name = PROGRAM_NAME
+    zweck = "GUI zum Pruefen und Reparieren von ID3-Tags."
+    version, stand = read_version_info()
+    innen = f"  {name}  "
+    linie = "═" * len(innen)
+    farbe = "\033[96m" if _ausgabe_ist_terminal() else ""
+    aus = "\033[0m" if farbe else ""
+    print(f"{farbe}╔{linie}╗{aus}")
+    print(f"{farbe}║{innen}║{aus}")
+    print(f"{farbe}╚{linie}╝{aus}")
+    print(zweck)
+    print()
+    print(f"Version {version}  |  {stand}")
+    print()
+
+
+def pruefe_plattform() -> None:
+    """Beendet den Fachlauf, wenn das Betriebssystem nicht zugesagt ist.
+
+    Rückgabewert:
+        None auf einem zugesagten System.
+
+    Fehlerfälle:
+        SystemExit 1 auf anderen Systemen.
+
+    Beispiel:
+        pruefe_plattform()
+    """
+    system = platform.system()
+    if system in {"Windows", "Linux"}:
+        return
+    print(
+        "FEHLER: Dieses Programm läuft unter Windows 11 und Linux "
+        f"(erkannt: {system}).",
+        file=sys.stderr,
+    )
+    raise SystemExit(1)
+
 def main():
     """Startet die Qt-Anwendung mit Konfiguration, Theme und Hauptfenster.
 
@@ -176,6 +248,8 @@ def main():
 
 if __name__ == "__main__":
     args = parse_args(sys.argv[1:])
+    print_startup_banner()
+    pruefe_plattform()
     _logging_enabled = not args.no_log
     _install_excepthook()
     exit_code = 0
