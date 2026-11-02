@@ -3,9 +3,9 @@ MP3 Tag Checker – Regelengine fuer ID3-Probleme und Korrekturvorschlaege.
 
 Projekt:     MP3 Tag Checker
 Modul:       mp3lib/rules.py
-Version:     1.12.0
-Stand:       2026-08-18
-Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Version:     1.12.1
+Stand:       2026-11-02
+Abhaengig:   Python >= 3.11; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
 Bezug:       requirements.txt
 Lizenz:      MIT
 Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
@@ -23,6 +23,7 @@ Historie
 --------
 Version 1.11.0 – 2026-08-14 – CLI --help/--version/--Ende, Python 3.13
 Version 1.12.0 – 2026-08-18 – Styleguide 1.4.0: Dateikopf Pflichtfelder
+Version 1.12.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 
 Aufruf / Nutzung
 ----------------

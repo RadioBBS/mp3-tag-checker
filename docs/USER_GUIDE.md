@@ -220,14 +220,14 @@ The app updates itself from GitHub:
 All of these live next to `run.bat` and are personal — they are not part of
 the repository:
 
-| File | Purpose |
-|---|---|
+| File          | Purpose                                                         |
+|---------------|-----------------------------------------------------------------|
 | `config.json` | libraries and all settings (recreated with defaults if deleted) |
-| `folders.txt` | artist folder list of the default library |
-| `library*.db` | per-library scan database: snapshots, proposals, changelog |
-| `themes.json` | your custom themes |
-| `error.log` | details of any unexpected error |
-| `.venv\` | the Python environment built by `run.bat` |
+| `folders.txt` | artist folder list of the default library                       |
+| `library*.db` | per-library scan database: snapshots, proposals, changelog      |
+| `themes.json` | your custom themes                                              |
+| `error.log`   | details of any unexpected error                                 |
+| `.venv\`      | the Python environment built by `run.bat`                       |
 
 ## 12. Troubleshooting
 

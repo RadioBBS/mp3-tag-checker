@@ -5,14 +5,18 @@ MP3 Tag Checker – GUI zum Pruefen und Reparieren von ID3-Tags.
 
 Projekt:     MP3 Tag Checker
 Modul:       README.md
-Version:     1.12.0
-Stand:       2026-08-18
-Abhaengig:   Python >= 3.10; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
+Version:     1.12.1
+Stand:       2026-11-02
+Abhaengig:   Python >= 3.11; mutagen>=1.47; Pillow>=11.0; PySide6>=6.8; requests>=2.32
 Bezug:       requirements.txt
 Lizenz:      MIT
 Upstream:    https://github.com/DarkKoNO/mp3-tag-checker (Jakub Konopasek)
 Erstellt mit: Cursor Grok 4.6
 Autor:       (FFHB) / RadioBBS
+
+Historie
+--------
+Version 1.12.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 ```
 
 A Windows desktop application that audits and fixes the ID3 tags of an MP3
@@ -24,7 +28,7 @@ via History.
 Written by **Claude Fable 5** (Anthropic's AI model) in collaboration with
 Jakub Konopásek.
 
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Python](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 
@@ -79,7 +83,7 @@ Jakub Konopásek.
 
 ## Quick start
 
-1. Install [Python 3.10+](https://www.python.org/downloads/) (check *"Add
+1. Install [Python 3.11+](https://www.python.org/downloads/) (check *"Add
    python.exe to PATH"* during installation).
 2. Download or clone this repository.
 3. Double-click **`run.bat`**. On first run it creates a virtual environment
@@ -108,7 +112,7 @@ contribute.
 
 ## Requirements
 
-- Windows, Python 3.10+ (tested up to 3.13)
+- Windows, Python 3.11+ (tested up to 3.13)
 - Dependencies (installed automatically by `run.bat`):
   [mutagen](https://mutagen.readthedocs.io/) (tag I/O),
   [PySide6](https://doc.qt.io/qtforpython/) (GUI),
@@ -118,3 +122,16 @@ contribute.
 ## License
 
 [MIT](LICENSE) — free for personal and commercial use.
+
+## Installation
+
+Aufruf ueber python, kein chmod.
+
+Keine Extra-Systempakete.
+
+Abhaengigkeitsdatei (auch ohne Paketzeilen):
+
+```bash
+python -m pip install -r requirements.txt
+```
+

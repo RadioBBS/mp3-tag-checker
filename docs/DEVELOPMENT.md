@@ -6,7 +6,7 @@ with Jakub Konopásek.
 
 ## Tech stack
 
-- **Python 3.10+** (tested up to 3.13), GUI in **PySide6** (Qt 6, Fusion style)
+- **Python 3.11+** (tested up to 3.13), GUI in **PySide6** (Qt 6, Fusion style)
 - **mutagen** for ID3 reading/writing, **Pillow** for cover images,
   **requests** for online metadata
 - **SQLite** (stdlib `sqlite3`) for all persistent state — one database per
@@ -69,20 +69,20 @@ files ◄──  applier  ◄────────────  approved prop
 
 Defined in `mp3lib/db.py`:
 
-| Table | Contents |
-|---|---|
-| `scans` | one row per scan/apply/revert run |
-| `artists`, `albums` | folder-level facts (artist.jpg / folder.jpg present) |
-| `tracks` | one row per file: path, size, mtime, current field values |
-| `snapshots` | full tag state (JSON) of a track at a point in time — the history |
-| `cover_blobs` | deduplicated embedded cover images |
-| `issues` | current problems found by the rules |
-| `proposals` | concrete proposed field changes awaiting review |
-| `pending_covers` | covers fetched online, awaiting apply |
-| `exceptions` | user-declared "stop flagging this" records |
-| `changelog` | every field ever written: old → new, when, why |
-| `v1_keep_v2` | per-(track, field) "keep ID3v2" decisions for the ID3v1/v2 conflict flow |
-| `ape_keep_v2` | per-(track, field) "keep ID3v2" decisions for the APEv2/v2 conflict flow |
+| Table               | Contents                                                                 |
+|---------------------|--------------------------------------------------------------------------|
+| `scans`             | one row per scan/apply/revert run                                        |
+| `artists`, `albums` | folder-level facts (artist.jpg / folder.jpg present)                     |
+| `tracks`            | one row per file: path, size, mtime, current field values                |
+| `snapshots`         | full tag state (JSON) of a track at a point in time — the history        |
+| `cover_blobs`       | deduplicated embedded cover images                                       |
+| `issues`            | current problems found by the rules                                      |
+| `proposals`         | concrete proposed field changes awaiting review                          |
+| `pending_covers`    | covers fetched online, awaiting apply                                    |
+| `exceptions`        | user-declared "stop flagging this" records                               |
+| `changelog`         | every field ever written: old → new, when, why                           |
+| `v1_keep_v2`        | per-(track, field) "keep ID3v2" decisions for the ID3v1/v2 conflict flow |
+| `ape_keep_v2`       | per-(track, field) "keep ID3v2" decisions for the APEv2/v2 conflict flow |
 
 ## Invariants (do not break these)
 
